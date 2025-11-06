@@ -1,11 +1,11 @@
 name: Run All Discord Bots
 
-# on:
-#   push:
-#     branches: [ main ]
-#   schedule:
-#     - cron: "0 15 * * *"
-#   workflow_dispatch:
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: "0 15 * * *"
+  workflow_dispatch:
 
 jobs:
   run-bots:
@@ -28,10 +28,10 @@ jobs:
         env:
           CONSERVATORY_DISCORD_WEBHOOK: ${{ secrets.CONSERVATORY_DISCORD_WEBHOOK }}
 
-      - name: Run SUAGTFO Bot
-        run: npm run suagtfo
-        env:
-          SUAGTFO_DISCORD_WEBHOOK: ${{ secrets.SUAGTFO_DISCORD_WEBHOOK }}
+      # - name: Run SUAGTFO Bot
+      #   run: npm run suagtfo
+      #   env:
+      #     SUAGTFO_DISCORD_WEBHOOK: ${{ secrets.SUAGTFO_DISCORD_WEBHOOK }}
 
       - name: Upload logs
         uses: actions/upload-artifact@v4
