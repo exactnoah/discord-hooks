@@ -9,6 +9,7 @@ import { produceDailyQuote } from "../src/bots/dailyQuote.js";
 
 const producers = {
   conservatory: produceDailyQuote,
+  virtualVoid: produceDailyQuote,
   suagtfo: produceDailyQuote,
 };
 
