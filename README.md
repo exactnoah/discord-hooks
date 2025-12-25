@@ -1,6 +1,11 @@
 # Discord Hooks
 Houses discord webhooks with secrets management, various api endpoint integrations, node.js, and github actions workflows.
 
+## Current Bots
+- **Conservatory** - Daily quote bot for the Conservatory server (currently disabled)
+- **Virtual Void** - Daily quote bot for the Virtual Void server
+- **SUAGTFO** - Daily quote bot (currently disabled)
+
 ## Build Info for other Technical Users
 - daily-quote.yml is the pipeline. You can add your bot api webhook as an environment variable and pass it to your scripts. 
 - Add a producer for whatever bot you integrate.
@@ -20,6 +25,7 @@ To operate this, you will need to modify the code to enable the bots of your cho
 
 | Version | Release Date | Features | Notes |
 |----------|---------------|-----------|-------|
+| 1.0.4 | Dec 2025 | Added Virtual Void bot for my server. | Active version. |
 | 1.0.3 | Nov 2025 | Introduced webhooks for public use. Enabled bots to run, except SUGTFO. | Stable version. |
 
 ## Contributor(s)
