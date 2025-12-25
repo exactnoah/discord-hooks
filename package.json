@@ -6,6 +6,7 @@
   "main": "bin/run-bot.js",
   "scripts": {
     "conservatory": "node bin/run-bot.js conservatory",
+    "virtualVoid": "node bin/run-bot.js virtualVoid",
     "suagtfo": "node bin/run-bot.js suagtfo"
   },
   "keywords": ["discord", "webhooks", "automation", "api"],

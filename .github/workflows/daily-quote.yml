@@ -23,10 +23,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Conservatory Bot
-        run: npm run conservatory
+      # - name: Run Conservatory Bot
+      #   run: npm run conservatory
+      #   env:
+      #     CONSERVATORY_DISCORD_WEBHOOK: ${{ secrets.CONSERVATORY_DISCORD_WEBHOOK }}
+
+      - name: Run Virtual Void Bot
+        run: npm run virtualVoid
         env:
-          CONSERVATORY_DISCORD_WEBHOOK: ${{ secrets.CONSERVATORY_DISCORD_WEBHOOK }}
+          VIRTUAL_VOID_DISCORD_WEBHOOK: ${{ secrets.VIRTUAL_VOID_DISCORD_WEBHOOK }}
 
       # - name: Run SUAGTFO Bot
       #   run: npm run suagtfo
@@ -39,6 +44,7 @@ jobs:
           name: all-bot-logs
           path: |
             conservatory-quote-bot.log
+            virtual-void-quote-bot.log
             suagtfo-quote-bot.log
 
 ## How schedule works

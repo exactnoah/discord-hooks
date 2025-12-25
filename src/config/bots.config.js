@@ -7,6 +7,14 @@ export const botsConfig = {
     setIdentityOnStart: false,
   },
 
+  virtualVoid: {
+    webhook: process.env.VIRTUAL_VOID_DISCORD_WEBHOOK,
+    username: "𝒯𝒽𝑒 𝒱𝑜𝒾𝒹'𝓈 𝒱𝑜𝒾𝒸𝑒𝓁𝑒𝓈𝓈",
+    avatarUrl: "https://noahsnook.me/assets/images/voidAvatar.png",
+    logfile: "virtual-void-quote-bot.log",
+    setIdentityOnStart: false,
+  },
+
   suagtfo: {
     webhook: process.env.SUAGTFO_DISCORD_WEBHOOK,
     username: "The Lord of the Rings",
