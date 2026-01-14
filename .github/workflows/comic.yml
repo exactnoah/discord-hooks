@@ -1,12 +1,14 @@
-name: Run All Discord Bots
+name: Comic Chaos Bot
 
 on:
   schedule:
-    - cron: "0 15 * * *"
-  workflow_dispatch:
+    - cron: "0 15 * * 1-5"
+  push:
+    branches:
+        - main
 
 jobs:
-  run-bots:
+  run-comic-chaos:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,29 +23,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Virtual Void Bot
-        run: npm run virtualVoid
+      - name: Run Comic Chaos Bot
+        run: npm run cs4760
         env:
-          VIRTUAL_VOID_DISCORD_WEBHOOK: ${{ secrets.VIRTUAL_VOID_DISCORD_WEBHOOK }}
-        
-      # - name: Run Conservatory Bot
-      #   run: npm run conservatory
-      #   env:
-      #     CONSERVATORY_DISCORD_WEBHOOK: ${{ secrets.CONSERVATORY_DISCORD_WEBHOOK }}
-
-      # - name: Run SUAGTFO Bot
-      #   run: npm run suagtfo
-      #   env:
-      #     SUAGTFO_DISCORD_WEBHOOK: ${{ secrets.SUAGTFO_DISCORD_WEBHOOK }}
+          CS4760_DISCORD_WEBHOOK: ${{ secrets.CS4760_DISCORD_WEBHOOK }}
 
       - name: Upload logs
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: all-bot-logs
-          path: |
-            conservatory-quote-bot.log
-            virtual-void-quote-bot.log
-            suagtfo-quote-bot.log
+          name: comic-chaos-logs
+          path: cs4760-quote-bot.log
 
 ## How schedule works
 #     ┌───────────── minute (0 - 59)
@@ -53,3 +43,6 @@ jobs:
 # │ │ │ │ ┌───────────── day of week (0 - 6) (Sunday=0)
 # │ │ │ │ │
 # * * * * *
+#
+# Current schedule: 0 15 * * 1-5
+# = 9:00 AM, Monday-Friday

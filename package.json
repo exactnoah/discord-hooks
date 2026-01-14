@@ -7,7 +7,8 @@
   "scripts": {
     "conservatory": "node bin/run-bot.js conservatory",
     "virtualVoid": "node bin/run-bot.js virtualVoid",
-    "suagtfo": "node bin/run-bot.js suagtfo"
+    "suagtfo": "node bin/run-bot.js suagtfo",
+    "cs4760": "node bin/run-bot.js cs4760"
   },
   "keywords": ["discord", "webhooks", "automation", "api"],
   "author": "",
