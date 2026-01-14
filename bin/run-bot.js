@@ -6,11 +6,13 @@ import { botsConfig } from "../src/config/bots.config.js";
 
 // message producers
 import { produceDailyQuote } from "../src/bots/dailyQuote.js";
+import { produceComicChaos } from "../src/bots/comicChaos.js";
 
 const producers = {
   conservatory: produceDailyQuote,
   virtualVoid: produceDailyQuote,
   suagtfo: produceDailyQuote,
+  cs4760: produceComicChaos,
 };
 
 

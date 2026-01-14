@@ -21,5 +21,13 @@ export const botsConfig = {
     avatarUrl: "https://noahsnook.me/assets/images/dark-lord-sauron.png",
     logfile: "suagtfo-quote-bot.log",
     setIdentityOnStart: false,
+  },
+
+  cs4760: {
+    webhook: process.env.CS4760_DISCORD_WEBHOOK,
+    username: "ℂ𝕠𝕞𝕚𝕔 ℂ𝕙𝕒𝕠𝕤",
+    avatarUrl: "https://noahsnook.me/assets/images/newspaperCartoon.png",
+    logfile: "cs4760-quote-bot.log",
+    setIdentityOnStart: false,
   }
 };
