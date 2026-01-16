@@ -2,11 +2,8 @@ name: Comic Chaos Bot
 
 on:
   schedule:
-    - cron: "0 15 * * 1-5"
+    - cron: "0 15 * * *"
   workflow_dispatch:
-  push:
-    branches:
-        - main
 
 jobs:
   run-comic-chaos:
