@@ -25,8 +25,8 @@ export const botsConfig = {
 
   cs4760: {
     webhook: process.env.CS4760_DISCORD_WEBHOOK,
-    username: "ℂ𝕠𝕞𝕚𝕔 ℂ𝕙𝕒𝕠𝕤",
-    avatarUrl: "https://noahsnook.me/assets/images/newspaperCartoon.png",
+    username: "𝔑𝔬𝔞𝔥'𝔰 𝔐𝔦𝔫𝔦𝔬𝔫",
+    avatarUrl: "https://noahsnook.me/assets/images/minion.jpg",
     logfile: "cs4760-quote-bot.log",
     setIdentityOnStart: false,
   }
