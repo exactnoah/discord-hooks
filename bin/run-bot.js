@@ -10,9 +10,9 @@ import { produceComicChaos } from "../src/bots/comicChaos.js";
 
 const producers = {
   conservatory: produceDailyQuote,
-  virtualVoid: produceDailyQuote,
+  virtualVoid: [produceDailyQuote, produceComicChaos][Math.floor(Math.random() * 2)],
   suagtfo: produceDailyQuote,
-  cs4760: produceComicChaos,
+  cs4760: [produceComicChaos, produceComicChaos][Math.floor(Math.random() * 2)],
 };
 
 
