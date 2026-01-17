@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "0 15 * * *"
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   run-bots:
@@ -25,6 +28,11 @@ jobs:
         run: npm run virtualVoid
         env:
           VIRTUAL_VOID_DISCORD_WEBHOOK: ${{ secrets.VIRTUAL_VOID_DISCORD_WEBHOOK }}
+
+      - name: Run Comic Chaos Bot
+        run: npm run cs4760
+        env:
+          CS4760_DISCORD_WEBHOOK: ${{ secrets.CS4760_DISCORD_WEBHOOK }}
         
       # - name: Run Conservatory Bot
       #   run: npm run conservatory
@@ -44,6 +52,7 @@ jobs:
             conservatory-quote-bot.log
             virtual-void-quote-bot.log
             suagtfo-quote-bot.log
+            cs4760-quote-bot.log
 
 ## How schedule works
 #     ┌───────────── minute (0 - 59)
