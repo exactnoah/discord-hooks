@@ -12,5 +12,5 @@ export async function produceComicChaos() {
   const comicRandom = await resRandom.json();
 
   // Format: Title, alt text, and link to the comic
-  return `**${comicRandom.safe_title}**\n-#(#${comicRandom.num})\n"${comicRandom.alt}"\n[Image Link](${comicRandom.img})`;
+  return `**${comicRandom.safe_title}**\n-# (Num: ${comicRandom.num})\n"${comicRandom.alt}"\n[Image Link](${comicRandom.img})`;
 }
