@@ -28,9 +28,10 @@ To operate this, you will need to modify the code to enable the bots of your cho
 
 | Version | Release Date | Features | Notes |
 |----------|---------------|-----------|-------|
-| 1.0.8 | Jan 2026 | Added profanity filtering to Comic Chaos bot using src/assets/en.json dictionary. | Active version. |
-| 1.0.7 | Jan 2026 | Changed Comic Chaos to post random xkcd comics instead of latest. | Active version. |
-| 1.0.6 | Jan 2026 | Consolidated pipeline files into single daily-quote.yml. Virtual Void bot now randomly chooses between quote or comic. | Active version. |
+| 1.0.9 | Jan 2026 | Fixed random producer selection bug - now properly randomizes at runtime instead of module load time. | Active version. |
+| 1.0.8 | Jan 2026 | Added profanity filtering to Comic Chaos bot using src/assets/en.json dictionary. | Stable version. |
+| 1.0.7 | Jan 2026 | Changed Comic Chaos to post random xkcd comics instead of latest. | Stable version. |
+| 1.0.6 | Jan 2026 | Consolidated pipeline files into single daily-quote.yml. Virtual Void bot now randomly chooses between quote or comic. | Unstable version. |
 | 1.0.5 | Jan 2026 | Added CS4760 Comic Chaos bot with xkcd integration. | Stable version. |
 | 1.0.4 | Dec 2025 | Added Virtual Void bot for my server. | Stable version. |
 | 1.0.3 | Nov 2025 | Introduced webhooks for public use. Enabled bots to run, except SUGTFO. | Earlier version. |

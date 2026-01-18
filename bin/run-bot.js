@@ -8,11 +8,19 @@ import { botsConfig } from "../src/config/bots.config.js";
 import { produceDailyQuote } from "../src/bots/dailyQuote.js";
 import { produceComicChaos } from "../src/bots/comicChaos.js";
 
+// Helper function for random producer selection
+function randomChoice(...producers) {
+  return () => {
+    const chosen = producers[Math.floor(Math.random() * producers.length)];
+    return chosen();
+  };
+}
+
 const producers = {
   conservatory: produceDailyQuote,
-  virtualVoid: [produceDailyQuote, produceComicChaos][Math.floor(Math.random() * 2)],
+  virtualVoid: randomChoice(produceDailyQuote, produceComicChaos),
   suagtfo: produceDailyQuote,
-  cs4760: [produceComicChaos, produceComicChaos][Math.floor(Math.random() * 2)],
+  cs4760: randomChoice(produceDailyQuote, produceComicChaos),
 };
 
 
